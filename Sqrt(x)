@@ -1,0 +1,6 @@
+func mySqrt(x int) int {
+  res := math.Sqrt(float64(x))
+	///fmt.Println(res)
+	return int(res)
+  
+}
