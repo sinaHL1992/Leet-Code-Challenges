@@ -1,0 +1,16 @@
+func singleNumber(nums []int) int {
+	mp := make(map[int]int)
+	//var key int
+	for i := 0; i < len(nums); i++ {
+		mp[int(nums[i])]++
+
+	}
+        for i := range nums {
+            if mp[nums[i]] == 1 {
+                return nums[i]
+            }
+
+        }
+	return 0
+
+}
