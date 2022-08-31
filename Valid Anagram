@@ -1,0 +1,22 @@
+func isAnagram(s string, t string) bool {
+anagram := make(map[string]int)
+	lenS := len(s)
+	lenT := len(t)
+	if lenS != lenT {
+		return false
+	}
+	for i := 0; i < lenS; i++ {
+		anagram[string(s[i])]++
+
+	}
+	for i := 0; i < lenT; i++ {
+		anagram[string(t[i])]--
+	}
+	for i := 0; i < lenS; i++ {
+		if anagram[string(s[i])] != 0 {
+			return false
+		}
+	}
+	return true
+
+}
