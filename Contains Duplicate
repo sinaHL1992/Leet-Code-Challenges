@@ -1,0 +1,11 @@
+func containsDuplicate(nums []int) bool {
+  	mp := make(map[int]int)
+		for i := 0; i < len(nums); i++ {
+			mp[int(nums[i])]++
+			if mp[int(nums[i])] > 1 {
+				return true
+			}
+
+		}
+		return false  
+}
